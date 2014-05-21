@@ -1,0 +1,5 @@
+#
+# system.prop for y301a2
+#
+
+ro.sf.lcd_density=240
