@@ -11,7 +11,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 LOCAL_PATH := device/huawei/y301a2
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
+	LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -20,7 +20,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/fstab.qcom:recovery/root/fstab.qcom \
     $(LOCAL_PATH)/recovery/init.qcom.class_core.sh:recovery/root/init.qcom.class_core.sh \
     $(LOCAL_PATH)/recovery/init.qcom.class_main.sh:recovery/root/init.qcom.class_main.sh \
     $(LOCAL_PATH)/recovery/init.qcom.early_boot.sh:recovery/root/init.qcom.early_boot.sh \
@@ -30,6 +29,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/init.qcom.usb.rc:recovery/root/init.qcom.usb.rc\
     $(LOCAL_PATH)/recovery/init.qcom.usb.sh:recovery/root/init.qcom.usb.sh \
     $(LOCAL_PATH)/recovery/ueventd.qcom.rc:recovery/root/ueventd.qcom.rc 
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/res/images/480x800/battery_01.png:recovery/root/res/images/480x800/battery_01.png \
@@ -57,8 +59,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/res/images/480x800/number_10.png:recovery/root/res/images/480x800/number_10.png \
     $(LOCAL_PATH)/recovery/res/images/480x800/number_wait.png:recovery/root/res/images/480x800/number_wait.png
 
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/sbin/charge:recovery/root/sbin/charge \
+    $(LOCAL_PATH)/recovery/sbin/charge.sh:recovery/root/sbin/charge.sh \
     $(LOCAL_PATH)/recovery/sbin/libqmi_oem_main:recovery/root/sbin/libqmi_oem_main \
     $(LOCAL_PATH)/recovery/sbin/resize2fs_s:recovery/root/sbin/resize2fs_s \
     $(LOCAL_PATH)/recovery/sbin/rmt_oeminfo:recovery/root/sbin/rmt_oeminfo \
