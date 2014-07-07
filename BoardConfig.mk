@@ -51,9 +51,9 @@ TARGET_KERNEL_SOURCE := kernel/huawei/y301a2
 TARGET_KERNEL_CONFIG := hw_msm8930_defconfig
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/huawei/y301a2/recovery/etc/fstab.y301a2
-BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/y301a2/recovery/graphics/graphics.c
-TARGET_RECOVERY_INITRC := device/huawei/y301a2/recovery/init.rc
+TARGET_RECOVERY_FSTAB := device/huawei/y301a2/rootdir/recovery/etc/fstab.y301a2
+BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/y301a2/recovery/graphics.c
+TARGET_RECOVERY_INITRC := device/huawei/y301a2/rootdir/recovery/init.rc
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_HAS_NO_SELECT_BUTTON := true
@@ -87,7 +87,7 @@ TW_INTERNAL_STORAGE_MOUNT_POINT := "internal_sd"
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_DEFAULT_EXTERNAL_STORAGE := true
-TW_BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/y301a2/recovery/graphics/twrpgraphics.c
+TW_BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/y301a2/recovery/twrpgraphics.c
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
 
