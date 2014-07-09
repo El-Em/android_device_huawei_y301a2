@@ -10,9 +10,13 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/huawei/y301a2/y301a2.mk)
 
+# Correct boot animation size for the screen
+TARGET_SCREEN_HEIGHT := 800
+TARGET_SCREEN_WIDTH := 480
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := y301a2
 PRODUCT_NAME := cm_y301a2
-PRODUCT_BRAND := MetroPCS
+PRODUCT_BRAND := qcom
 PRODUCT_MODEL := y301a2
 PRODUCT_MANUFACTURER := huawei

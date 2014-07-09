@@ -50,10 +50,14 @@ on boot
 service ueventd /sbin/ueventd
     critical
 
-service charge /sbin/charge
+service rmt_storage /sbin/rmt_storage
+    user root
+
+service rmt_oeminfo /sbin/rmt_oeminfo
     oneshot
 
-service recovery /sbin/recovery
+service recovery /sbin/sh /sbin/charge.sh
+    oneshot
 
 service adbd /sbin/adbd recovery
     disabled
