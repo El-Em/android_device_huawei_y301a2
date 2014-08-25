@@ -39,7 +39,7 @@ TARGET_KRAIT_BIONIC_BBTHRESH := 64
 TARGET_KRAIT_BIONIC_PLDSIZE := 64
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -48,7 +48,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.6
 TARGET_KERNEL_CUSTOM_TOOLCHAIN_SUFFIX := arm-eabi-
 TARGET_KERNEL_SOURCE := kernel/huawei/y301a2
-TARGET_KERNEL_CONFIG := hw_msm8930_defconfig
+TARGET_KERNEL_CONFIG := y301a2_defconfig
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/huawei/y301a2/rootdir/recovery/etc/fstab.y301a2
@@ -76,16 +76,15 @@ BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
 # TWRP configs
 DEVICE_RESOLUTION := 480x800
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
-BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_MISC_PARTITION := true
 TW_FLASH_FROM_STORAGE := true
 SP1_NAME := "Cust"
 SP1_BACKUP_METHOD := files
 SP1_MOUNTABLE := 1
 TW_INTERNAL_STORAGE_PATH := "/internal_sd"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "internal_sd"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "Internal_sd"
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "External_sd"
 TW_DEFAULT_EXTERNAL_STORAGE := true
 TW_BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/y301a2/recovery/twrpgraphics.c
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
