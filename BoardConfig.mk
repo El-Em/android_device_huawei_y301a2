@@ -1,3 +1,19 @@
+#
+# Copyright (C) 2014 The Android Open-Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
@@ -52,7 +68,6 @@ TARGET_KERNEL_CONFIG := y301a2_defconfig
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/huawei/y301a2/rootdir/recovery/etc/fstab.y301a2
-BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/y301a2/recovery/graphics.c
 TARGET_RECOVERY_INITRC := device/huawei/y301a2/rootdir/recovery/init.rc
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
@@ -62,6 +77,7 @@ BOARD_RECOVERY_SWIPE := false
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0xC00000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x1000000
@@ -86,7 +102,6 @@ TW_INTERNAL_STORAGE_MOUNT_POINT := "Internal_sd"
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "External_sd"
 TW_DEFAULT_EXTERNAL_STORAGE := true
-TW_BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/y301a2/recovery/twrpgraphics.c
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
 

@@ -2,4 +2,5 @@
 # system.prop for y301a2
 #
 
+ro.vold.umsdirtyratio=50
 ro.sf.lcd_density=240
